@@ -30,7 +30,127 @@
 			</ul>
 		</nav>
 		<main>
-		Página em construção.
+			<output id="mensagem" name="mensagem">Voluntário cadastrado com sucesso!</output>
+			<h2 id="title-form" >CADASTRO DE VOLUNTÁRIO</h2>
+			<form action="#" id="cadastroVoluntario" name="cadastroVoluntario" class="formularioCadastro" method="post" >
+				  <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-line">
+                        <div class="countainer-form-label" >
+							<label for="nome">*Nome Completo: </label>
+						</div>
+                        <div class="countainer-form-campo" >
+							<input type="text" id="nome" name="nome" class="campoLargura100porcento" required>
+						</div>
+                    </div>
+					 <div class="form-line">
+						 <div class="countainer-form-label">
+							<label for="nome">*Sexo: </label>
+						 </div>
+						 <div class="countainer-form-campo" >
+							<select id="sexo" name="sexo" required>
+								<option value="">Selecione</option>
+								<option value="MA">Masculino</option>
+								<option value="FE">Feminino</option>
+								<option value="ND">Não declarado</option>
+							</select>
+						</div>
+                    </div>
+					<div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="nascimento">*Data de Nascimento: </label>
+						</div>
+						<div class="countainer-form-campo" >
+							<input type="date" id="nascimento" name="nascimento" min="10" max="10" required>
+						</div>
+                    </div>
+					<div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="nascimento">*CPF: </label>
+						</div>
+						<div class="countainer-form-campo" >
+							<input type="text" id="cpf" name="cpf" class="campoLargura40porcento" placeholder="999.999.999-99" required>
+						</div>
+                    </div>
+                    <div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="email">*E-mail: </label>
+						</div>
+						<div class="countainer-form-campo" >
+							<input type="email" id="email" name="email" class="campoLargura100porcento" required>
+						</div>
+                    </div>
+                    <div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="telefone">*Telefone: </label>
+						</div>
+						<div class="countainer-form-campo" >
+							<input type="tel" id="telefone" name="telefone" class="campoLargura40porcento" placeholder="(11) 99999-9999" required>
+						</div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Disponibilidade</legend>
+					 <div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="disponibilidade">*Na Instituição: </label>
+						</div>
+						<div class="countainer-form-campo" >
+							<select id="instituicao" name="instituicao" class="campoLargura100porcento" required>
+								<option value="">Selecione...</option>
+								<option value="00">00 - Qualquer uma</option>
+								<option value="01">Cod 01 - Cáritas Brasileira</option>
+								<option value="02">Cod 02 - Conferência do Brasil</option>
+								<option value="03">Cod 03 - Conselho Indigenista Missionário</option>
+								<option value="04">Cod 04 - Comissão Pastoral da Terra</option>
+								<option value="05">Cod 05 - Obras Missionárias</option>
+								<option value="06">Cod 06 - Rede Pan-Amazônica</option>
+								<option value="07">Cod 07 - Movimento de Educação de Base</option>
+								<option value="08">Cod 08 - Comissão Brasileira Justiça e Paz</option>
+								<option value="09">Cod 09 - Centro Cultural Missionário</option>
+								<option value="10">Cod 10 - Conselho Nacional do Brasil</option>
+							</select>
+						</div>
+                    </div>
+                    <div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="disponibilidade">*Qual a sua disponibilidade? </label>
+						</div>
+						<div class="countainer-form-campo" >
+							<select id="disponibilidade" name="disponibilidade" class="campoLargura100porcento" required>
+								<option value="">Selecione...</option>
+								<option value="fins-de-semana">Fins de semana</option>
+								<option value="dias-uteis">Dias úteis</option>
+								<option value="flexivel">Horário flexível</option>
+								<option value="pontual">Ações pontuais</option>
+							</select>
+						</div>
+                    </div>
+                    <div class="form-line">
+						<div class="countainer-form-label" >
+							<label for="area-interesse">*Área de Interesse: </label>
+						</div>
+						<div class="countainer-form-campo">
+							<select id="interesse" name="interesse" class="campoLargura100porcento" required>
+								<option value="">Selecione...</option>
+								<option value="distribuicao-alimentos">Distribuição de Alimentos</option>
+								<option value="educacao">Educação e Capacitação</option>
+								<option value="saude">Apoio à Saúde</option>
+								<option value="administrativo" >Apoio Administrativo</option>
+								<option value="qualquer">Qualquer área</option>
+							</select>
+						</div>
+                    </div>
+                </fieldset>
+				<div class="container-form-buttons">
+					<a href="index.html"><input type="button" class="button-cancel" value="Cancelar"></a>
+					<input type="submit" class="button-confirm" onLoad="enviaFormCadastroVoluntario()" value="Enviar">
+				</div>
+			</form>
+			<br>
+			<h2 id="titulo-cadastrados" >CADASTRADOS</h2><br>
+			<table id="voluntarios-cadastrados" name="voluntarios-cadastrados" border="1">
+			</table>
 		</main>
 	<footer>
 		<address>
