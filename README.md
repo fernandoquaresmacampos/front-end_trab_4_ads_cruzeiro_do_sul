@@ -9,4 +9,3 @@ Na página Cadastro de Volutário, o formulário recebeu o auxílio de código J
 Projeto codificado para ter acessibilidade, com CSS e JavaScript minificados e histórico de commits.  
 
 Tecnologias Utilizadas: HTML 5; css 3 e JavaScript.
-
